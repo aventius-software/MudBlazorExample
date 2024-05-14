@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Components.Authorization;
+using MudBlazor.Services;
 using MyWebApp.Features.Shared;
 using MyWebApp.Features.Weather;
 using MyWebApp.Shared.Features.Weather;
@@ -16,9 +17,9 @@ namespace MyWebApp
                 .AddInteractiveServerComponents()
                 .AddInteractiveWebAssemblyComponents();
 
-            builder.Services.AddControllers();
-            
+            builder.Services.AddControllers();            
             builder.Services.AddSingleton<IWeatherForecaster, ServerWeatherForecaster>();
+            builder.Services.AddMudServices();
 
             var app = builder.Build();
 

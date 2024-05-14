@@ -1,30 +1,22 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">MyWebApp</a>
-    </div>
-</div>
+﻿<MudNavMenu Bordered="true" Color="Color.Info">
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+    @* Home *@
+    <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Dashboard">Home</MudNavLink>
+    <MudNavLink Href="/mud" Match="NavLinkMatch.Prefix">MudBlazor</MudNavLink>
+    <MudNavLink Href="/weather" Match="NavLinkMatch.Prefix">Weather</MudNavLink>
 
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
+    <MudNavGroup Title="Administration" Icon="@Icons.Material.Filled.AdminPanelSettings">
+        <MudNavLink Href="/administration/settings" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Settings">Settings</MudNavLink>
+    </MudNavGroup>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
+    <MudNavGroup Title="Patients" Icon="@Icons.Material.Filled.People">
+        <MudNavLink Href="/patient/create" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add">Create a new patient</MudNavLink>
+        <MudNavLink Href="/patient/list" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.PersonSearch">Find a patient</MudNavLink>
+    </MudNavGroup>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
+    <MudNavGroup Title="Referrals" Icon="@Icons.Material.Filled.TransferWithinAStation">
+        <MudNavLink Href="/referral/create" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add">Create a new referral</MudNavLink>
+        <MudNavLink Href="/referral/list" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.FindInPage">Find a referral</MudNavLink>
+    </MudNavGroup>
 
+</MudNavMenu>
