@@ -6,7 +6,7 @@ using MyWebApp.Shared.Features.Themes;
 
 #endregion
 
-namespace MyWebApp.Features.Shared
+namespace MyWebApp.Client.Features.Shared
 {
     public class MainLayoutBase : LayoutComponentBase
     {
