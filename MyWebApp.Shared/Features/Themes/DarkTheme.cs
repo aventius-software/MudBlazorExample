@@ -15,11 +15,11 @@ namespace MyWebApp.Shared.Features.Themes
                 DefaultBorderRadius = "3px"
             };
 
-            Palette = new PaletteDark() //Palette()
+            PaletteDark = new PaletteDark()
             {
                 Black = "#27272f",
                 Background = "#32333d",
-                BackgroundGrey = "#27272f",
+                BackgroundGray = "#27272f",
                 Surface = "#373740",
                 DrawerBackground = "#27272f",
                 DrawerText = "rgba(255,255,255, 0.50)",

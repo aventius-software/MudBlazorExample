@@ -15,11 +15,11 @@ namespace MyWebApp.Shared.Features.Themes
                 DefaultBorderRadius = "3px"
             };
 
-            Palette = new PaletteLight() //Palette()
+            PaletteLight = new PaletteLight()
             {
                 Primary = Colors.Blue.Darken1,
                 Secondary = Colors.DeepPurple.Accent2,
-                Background = Colors.Grey.Lighten5,
+                Background = Colors.Gray.Lighten5,
                 AppbarBackground = Colors.Blue.Darken1,
                 DrawerBackground = "#FFF",
                 DrawerText = "rgba(0,0,0, 0.7)",
